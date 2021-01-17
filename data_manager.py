@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import xlrd
 
 print("data_manager start")
 
@@ -9,6 +10,10 @@ stock2000_v2.head()
 stock2000_v2.loc[0:5, ['Date', 'StockCode', 'Open', 'High', 'Low', 'Close', 'Volume', 'Adj_Close']]
 stock2000_v2.loc[0:0]
 
+# 인덱스를 지정해 시트 설정
+stock_info = pd.read_excel('Korea_Stocks_Info/stock_info2.xls')
+stock_info.head()
+stock_info.loc[0:2]
 def preprocess_stock3():
     pass
 
